@@ -1,9 +1,13 @@
 package com.roman.notificationlistenerexample.activity
 
+import android.content.ComponentName
+import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
+import android.provider.Settings
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import com.roman.notificationlistenerexample.service.NLService
 import com.roman.notificationlistenerexample.service.NotificationReceiver
 import com.roman.notificationlistenerexample.service.NotificationService
 import com.roman.notificationlistenerexample.ui.screens.MainScreen
@@ -26,6 +30,8 @@ class MainActivity : ComponentActivity() {
         val filter = IntentFilter(INTENT_FILTER_ACTION)
         registerReceiver(nReceiver, filter)
 
+        askPermission()
+
         setContent {
             NotificationListenerExampleTheme {
                 MainScreen(
@@ -47,5 +53,16 @@ class MainActivity : ComponentActivity() {
     override fun onDestroy() {
         super.onDestroy()
         unregisterReceiver(nReceiver)
+    }
+
+    private fun askPermission() {
+        val cn = ComponentName(applicationContext, NLService::class.java)
+        val flat: String = Settings.Secure.getString(contentResolver, "enabled_notification_listeners")
+        val enabled = flat.contains(cn.flattenToString())
+
+        if (!enabled) {
+            val intent = Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS")
+            startActivity(intent)
+        }
     }
 }

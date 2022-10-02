@@ -72,7 +72,7 @@ class NLService : NotificationListenerService() {
                     var i = 1
                     for (sbn in this@NLService.activeNotifications) {
                         val i2 = Intent(INTENT_FILTER_ACTION)
-                        i2.putExtra("notification_event", "$i ${sbn.packageName}")
+                        i2.putExtra("notification_event", "($i) Channel: ${sbn.notification.channelId}, Package: ${sbn.packageName}\n")
                         sendBroadcast(i2)
                         i++
                     }
