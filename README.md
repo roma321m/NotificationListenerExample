@@ -22,18 +22,17 @@ The application also demonstrates how to create a local notification with a noti
 
 ### Create Notification
 <p float="middle">
-  <img src="" width="200" />
-  <img src="" width="200" />
+  <img src="https://raw.githubusercontent.com/roma321m/NotificationListenerExample/main/readme%20pics/Screenshot_20221003-094556.png" width="200" />
+  <img src="https://raw.githubusercontent.com/roma321m/NotificationListenerExample/main/readme%20pics/Screenshot_20221003-094613.png" width="200" />
+  <img src="https://raw.githubusercontent.com/roma321m/NotificationListenerExample/main/readme%20pics/Screenshot_20221003-094622.png" width="200" />
 </p>
 
 ### Clear All Notifications
 <p float="middle">
-  <img src="" width="200" />
-  <img src="" width="200" />
+  <img src="https://raw.githubusercontent.com/roma321m/NotificationListenerExample/main/readme%20pics/Screenshot_20221003-094725.png" width="200" />
 </p>
 
 ### List All Notifications
 <p float="middle">
-  <img src="" width="200" />
-  <img src="" width="200" />
+  <img src="https://raw.githubusercontent.com/roma321m/NotificationListenerExample/main/readme%20pics/Screenshot_20221003-094707.png" width="200" />
 </p>
