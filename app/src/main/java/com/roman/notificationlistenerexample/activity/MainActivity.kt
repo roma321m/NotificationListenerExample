@@ -15,14 +15,13 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
-import com.roman.notificationlistenerexample.R
 import com.roman.notificationlistenerexample.service.NLService
+import com.roman.notificationlistenerexample.service.NLService.Companion.INTENT_FILTER_ACTION
 import com.roman.notificationlistenerexample.service.NotificationReceiver
 import com.roman.notificationlistenerexample.service.NotificationService
 import com.roman.notificationlistenerexample.ui.screens.MainScreen
 import com.roman.notificationlistenerexample.ui.theme.NotificationListenerExampleTheme
 import com.roman.notificationlistenerexample.ui.view_model.ViewModel
-import com.roman.notificationlistenerexample.util.Constants.INTENT_FILTER_ACTION
 
 
 class MainActivity : ComponentActivity() {

@@ -7,12 +7,12 @@ import android.content.IntentFilter
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.util.Log
-import com.roman.notificationlistenerexample.util.Constants.INTENT_FILTER_ACTION
 
 class NLService : NotificationListenerService() {
 
     companion object {
         const val TAG = "NotificationListener"
+        const val  INTENT_FILTER_ACTION = "com.roman.notificationListenerExample.NOTIFICATION_LISTENER_EXAMPLE"
     }
 
     private lateinit var nlServiceReceiver : NLServiceReceiver
